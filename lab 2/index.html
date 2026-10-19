@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Engineering Lab 02</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <h1 id="greeting">Welcome to Web Engineering</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#office-hours" aria-current="location">Office Hours</a></li>
+                <li><a href="#feedback">Send Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="office-hours">
+            <h2>Office Hours</h2>
+
+            <figure>
+                <svg width="80" height="80" viewBox="0 0 80 80" role="img" aria-labelledby="calendar-title">
+                    <title id="calendar-title">Office hours calendar icon</title>
+                    <rect x="10" y="15" width="60" height="55" rx="5" fill="none" stroke="currentColor" stroke-width="4"/>
+                    <line x1="10" y1="30" x2="70" y2="30" stroke="currentColor" stroke-width="4"/>
+                    <line x1="25" y1="10" x2="25" y2="22" stroke="currentColor" stroke-width="4"/>
+                    <line x1="55" y1="10" x2="55" y2="22" stroke="currentColor" stroke-width="4"/>
+                    <circle cx="30" cy="45" r="3" fill="currentColor"/>
+                    <circle cx="50" cy="45" r="3" fill="currentColor"/>
+                    <circle cx="30" cy="58" r="3" fill="currentColor"/>
+                    <circle cx="50" cy="58" r="3" fill="currentColor"/>
+                </svg>
+                <figcaption>Office hours schedule</figcaption>
+            </figure>
+
+            <table>
+                <caption>Weekly Office Hours Schedule</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Monday</th>
+                        <td><time datetime="09:00">9:00 AM</time> – <time datetime="11:00">11:00 AM</time></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Wednesday</th>
+                        <td><time datetime="13:00">1:00 PM</time> – <time datetime="15:00">3:00 PM</time></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Friday</th>
+                        <td><time datetime="10:00">10:00 AM</time> – <time datetime="12:00">12:00 PM</time></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <svg class="section-divider" viewBox="0 0 800 20" aria-hidden="true" focusable="false">
+            <line x1="0" y1="10" x2="800" y2="10" stroke="currentColor" stroke-width="2"/>
+            <circle cx="400" cy="10" r="6" fill="currentColor"/>
+        </svg>
+
+        <section id="feedback">
+            <h2>Send Feedback</h2>
+
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-hint" required>
+                    <small id="email-hint">Enter a valid email address.</small>
+                </div>
+
+                <fieldset>
+                    <legend>Topic</legend>
+                    <div>
+                        <input type="radio" id="general" name="topic" value="general" required>
+                        <label for="general">General</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="course" name="topic" value="course">
+                        <label for="course">Course</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="accessibility" name="topic" value="accessibility">
+                        <label for="accessibility">Accessibility</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Contact: <a href="mailto:abdulraheem@example.com">abdulraheem@example.com</a><br>
+            Web Engineering Department<br>
+            Pakistan
+        </address>
+    </footer>
+</body>
+</html>
